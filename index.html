@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Primary Meta Tags -->
+    <title>To-Do List - Manage Your Daily Tasks Efficiently</title>
+    <meta name="title" content="To-Do List - Manage Your Daily Tasks Efficiently">
+    <meta name="description" content="Simple and elegant to-do list web app to manage your daily tasks. Add, edit, delete, and mark tasks as complete with a beautiful interface.">
+    <meta name="keywords" content="todo list, task manager, productivity app, daily tasks, task organizer, to do list online">
+    <meta name="author" content="[Your Name Here]">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="To-Do List - Manage Your Daily Tasks">
+    <meta property="og:description" content="Simple and elegant to-do list web app to manage your daily tasks efficiently.">
+    <meta property="og:image" content="https://yourwebsite.com/todo-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="To-Do List - Manage Your Daily Tasks">
+    <meta property="twitter:description" content="Simple and elegant to-do list web app to manage your daily tasks efficiently.">
+    
+    <!-- Theme -->
+    <meta name="theme-color" content="#4f46e5">
+    
+    
+</head>
+<body>
+    <div class="todo-container">
+        <div class="header">
+            <h1 class="title">My To-Do List</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </div>
+
+        <div class="task-input-section">
+            <input type="text" class="task-input" id="taskInput" placeholder="What needs to be done?" maxlength="100">
+            <button class="add-button" onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-button active" onclick="filterTasks('all')">All</button>
+            <button class="filter-button" onclick="filterTasks('pending')">Pending</button>
+            <button class="filter-button" onclick="filterTasks('completed')">Completed</button>
+        </div>
+
+        <div class="tasks-list" id="tasksList">
+            <div class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks yet</h3>
+                <p>Add your first task above to get started!</p>
+            </div>
+        </div>
+
+        <button class="clear-completed" onclick="clearCompleted()" style="display: none;" id="clearButton">
+            Clear Completed Tasks
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+
+   
+</body>
+</html>
